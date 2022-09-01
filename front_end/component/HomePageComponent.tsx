@@ -1,7 +1,0 @@
-import Button from "@mui/material"
-
-export default function HomePageComponent() {
-    return (
-        
-    )
-}

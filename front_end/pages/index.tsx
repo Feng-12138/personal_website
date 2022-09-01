@@ -1,6 +1,6 @@
 import { Grid, Button, Typography } from "@mui/material";
 import { createTheme } from "@mui/material";
-import Router from "next/router";
+import router from "next/router";
 require("typeface-eb-garamond");
 import "@fontsource/montserrat";
 import { GiWindHole } from "react-icons/gi";
@@ -27,6 +27,9 @@ const theme = createTheme({
 });
 
 function HomePage(props: {}) {
+  const handleEnterMainPage = () => {
+    router.push("/main?account=yiran");
+  };
   return (
     <div style={{ height: "100vh", background: "black" }}>
       <div className="waterPrint">
@@ -50,6 +53,7 @@ function HomePage(props: {}) {
             height: "40px",
             top: "17vh",
           }}
+          onClick={handleEnterMainPage}
         >
           Get Started
         </Button>
