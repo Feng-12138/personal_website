@@ -19,8 +19,11 @@ export default function HeadBar() {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        zIndex: 2,
+        zIndex: 100,
         whiteSpace: "nowrap",
+        backgroundColor: "white",
+        top: "-0.1px",
+        position: "sticky",
       }}
     >
       <div className={styles.container}>

@@ -1,0 +1,20 @@
+.headerText {
+    font-size: 70px;
+    font-family: "EB Garamond";
+    color: white;
+    font-style:normal;
+    font-weight: 600;
+}
+
+.imageStyle {
+    transition: 0.3s linear;
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    width: 500px;
+    height: 550px;
+    opacity: 1;
+    filter: grayscale(100%);
+    cursor: pointer;
+}
