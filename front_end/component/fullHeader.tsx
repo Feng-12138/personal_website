@@ -27,7 +27,7 @@ export default function HeadBar() {
       }}
     >
       <div className={styles.container}>
-        <div style={{ fontSize: "1.8rem", fontWeight: 500 }}>
+        <div style={{ fontSize: "1.6rem", fontWeight: 500 }}>
           <span>20-</span>
           <GiWindHole />
           <span>-40</span>
@@ -35,21 +35,21 @@ export default function HeadBar() {
         <span
           onMouseOver={handleHover}
           onMouseLeave={handleLeave}
-          style={{ maxHeight: "21.25px" }}
+          style={{ maxHeight: "17.5px" }}
         >
           Qualifications
         </span>
         <span
           onMouseOver={handleHover}
           onMouseLeave={handleLeave}
-          style={{ maxHeight: "21.25px" }}
+          style={{ maxHeight: "17.5px" }}
         >
           Education
         </span>
         <span
           onMouseOver={handleHover}
           onMouseLeave={handleLeave}
-          style={{ maxHeight: "21.25px" }}
+          style={{ maxHeight: "17.5px" }}
         >
           {" "}
           Working Experience
@@ -57,7 +57,7 @@ export default function HeadBar() {
         <span
           onMouseOver={handleHover}
           onMouseLeave={handleLeave}
-          style={{ maxHeight: "21.25px" }}
+          style={{ maxHeight: "17.5px" }}
         >
           Projects
         </span>
@@ -73,10 +73,10 @@ export default function HeadBar() {
           fontSize: "13px",
           fontWeight: 600,
           height: "40px",
-          marginTop: "20px",
+          marginTop: "10px",
           width: "10%",
           textTransform: "none",
-          marginRight: 80,
+          marginRight: 60,
           whiteSpace: "nowrap",
         }}
       >

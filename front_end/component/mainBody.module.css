@@ -1,5 +1,5 @@
 .headerText {
-    font-size: 70px;
+    font-size: 60px;
     font-family: "EB Garamond";
     color: white;
     font-style:normal;
@@ -12,9 +12,15 @@
     transition-duration: 500ms;
     transition-timing-function: ease;
     transition-delay: 0s;
-    width: 500px;
-    height: 550px;
+    width: 400px;
+    height: 420px;
     opacity: 1;
-    filter: grayscale(100%);
     cursor: pointer;
+}
+
+.buttonTextTransition {
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+    transition-delay: 0s;
 }
