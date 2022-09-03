@@ -1,6 +1,7 @@
 # personal_website
 
-Goal of this project is to allow registered user to have their own shareable personal website, even with no programming and designing experience
+Goal of this project is to allow registered user to have their own shareable personal website(for higher chance of receiving interviews), 
+even with no programming and designing experience
 
 Initially forget to change default name(git config) due to just change laptop, now it is set to the correct account, which is Feng-12138. 
 
