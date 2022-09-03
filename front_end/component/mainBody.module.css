@@ -17,8 +17,48 @@
     opacity: 1;
     cursor: pointer;
 }
+.darkCard1 {
+    background-color: black;
+    row-gap: 10px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
 
+.whiteCard1 {
+    background-color: white;
+    display: flex;
+    padding-left: 205px;
+    padding-right: 205px;
+}
+.greyWhiteCard1 {
+    background-color: #f5f5f5;
+    font-size: 40px;
+    margin-top: 100px;
+    padding-top: 75px;
+    padding-left: 150px;
+    padding-right: 150px
+}
 .buttonTextTransition {
+    color: white;
+    font-family: "Montserrat";
+    font-size: 13px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-bottom-style: solid;
+    border-bottom-color: #666666;
+    border-bottom-width: 0.5rem;
+    max-width: 100px;
+    margin-left: 500px;
+    margin-top: 60px;
+    line-height: 12%;
+    position: absolute;
     transition-property: all;
     transition-duration: 300ms;
     transition-timing-function: ease;

@@ -34,32 +34,21 @@ export default function MainBody() {
     el.target.style.borderBottomWidth = "0.5rem";
   };
 
-  const handleRedirection = (page: string) => {
-    router.push(`/${page}`);
+  const handleRedirection = (page: string, userId: string) => {
+    router.push(`/${page}?account=${userId}`);
   };
 
   return (
     <div>
       <HeadBar />
-      <div
-        style={{
-          backgroundColor: "black",
-          rowGap: 10,
-          paddingTop: "4rem",
-          paddingBottom: "4rem",
-          display: "flex",
-          justifyContent: "space-between",
-          alignContent: "center",
-          alignItems: "center",
-          whiteSpace: "nowrap",
-        }}
-      >
+      <div className={styles.darkCard1}>
         <span>
           <span
             className={styles.headerText}
             style={{
               marginLeft: 100,
               marginTop: -35,
+              textAlign: "center",
             }}
           >
             Adequate Tech Stack For
@@ -74,23 +63,6 @@ export default function MainBody() {
           </div>
           <div
             className={styles.buttonTextTransition}
-            style={{
-              color: "white",
-              fontFamily: "Montserrat",
-              fontSize: 13,
-              fontWeight: "bold",
-              fontStyle: "normal",
-              letterSpacing: "2px",
-              cursor: "pointer",
-              borderBottomStyle: "solid",
-              borderBottomColor: "#666666",
-              borderBottomWidth: "0.5rem",
-              maxWidth: "100px",
-              marginLeft: "500px",
-              marginTop: "60px",
-              lineHeight: "12%",
-              position: "absolute",
-            }}
             onMouseEnter={(el) =>
               handleMouseOnButton(el, "rgb(255, 255, 255)", "130px")
             }
@@ -114,7 +86,11 @@ export default function MainBody() {
           onMouseLeave={handleMouseLeavePhoto}
         ></img>
       </div>
-      <div> hrerer</div>
+      <div className={styles.whiteCard1}>
+        <div className={styles.greyWhiteCard1}>
+          here and thererpfojf fwefheiof fjqeiofhe fewpf
+        </div>
+      </div>
     </div>
   );
 }
