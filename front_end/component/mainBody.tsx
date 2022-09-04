@@ -6,6 +6,7 @@ import router from "next/router";
 import { yellow } from "@mui/material/colors";
 require("typeface-eb-garamond");
 import { useEffect, useState } from "react";
+import { ListText } from "./listText";
 //  Adequate Tech Stack for fullstack Development
 
 export default function MainBody() {
@@ -42,6 +43,11 @@ export default function MainBody() {
   useEffect(() => {
     setWindowWidth(window.innerWidth);
   });
+
+  const educationTextOne =
+    "University of Waterloo, Bachelor of Mathematics, Major in Computer Science, AI Specialization, Minor in Combinatorics & Optimization, level 3A";
+
+  const educationTextTwo = "current CGPA ";
   return (
     <div>
       <HeadBar />
@@ -104,6 +110,11 @@ export default function MainBody() {
           >
             Most Outstanding Academic Record
           </div>
+          <ListText
+            text="University of Waterloo, Bachelor of Mathematics, Major in Computer
+              Science, AI Specialization, Minor in Combinatorics & Optimization"
+            windowWidth={windowWidth}
+          />
           <div
             style={{
               paddingLeft: windowWidth >= 1580 ? 150 : 50,
