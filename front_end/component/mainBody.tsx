@@ -5,7 +5,7 @@ import "@fontsource/montserrat";
 import router from "next/router";
 import { yellow } from "@mui/material/colors";
 require("typeface-eb-garamond");
-import { useEffect, useState } from "react";
+import { useEffect, useState, useLayoutEffect } from "react";
 import { ListText } from "./listText";
 //  Adequate Tech Stack for fullstack Development
 
@@ -40,9 +40,15 @@ export default function MainBody() {
   const handleRedirection = (page: string, userId: string) => {
     router.push(`/${page}?account=${userId}`);
   };
+
   useEffect(() => {
-    setWindowWidth(window.innerWidth);
-  });
+    function updateSize() {
+      setWindowWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
 
   const educationTextOne =
     "University of Waterloo, Bachelor of Mathematics, Major in Computer Science, AI Specialization, Minor in Combinatorics & Optimization, level 3A";
@@ -103,12 +109,23 @@ export default function MainBody() {
       <div className={styles.whiteCard1}>
         <div className={styles.greyWhiteCard1}>
           <div
+            style={{
+              backgroundColor: "rgb(251, 235, 79)",
+              width: (240 / 1440) * windowWidth,
+              height: 10,
+              // position: "absolute",
+              marginLeft: -250,
+              marginTop: 15,
+            }}
+          ></div>
+          <div
             className={styles.headerText}
             style={{
               color: "black",
               textAlign: "center",
               paddingRight: 50,
               paddingLeft: 50,
+              marginBottom: 35,
               fontSize: 40,
             }}
           >
@@ -118,16 +135,17 @@ export default function MainBody() {
           <ListText text={educationTextThree} windowWidth={windowWidth} />
           <ListText text={educationTextTwo} windowWidth={windowWidth} />
           <div
-            // className={styles.buttonTextTransition}
+            className={styles.buttonEducation}
             style={{
-              color: "black",
-              position: "absolute",
+              marginLeft:
+                ((windowWidth - 410 - 200) / (1440 - 410 - 200)) * 600,
+              marginTop: "50px",
             }}
             onMouseEnter={(el) =>
-              handleMouseOnButton(el, "rgb(255, 255, 255)", "200px")
+              handleMouseOnButton(el, "rgb(251, 235, 79)", "200px")
             }
             onMouseLeave={(el) => {
-              handleMouseLeaveButton(el, "#666666", "200px");
+              handleMouseLeaveButton(el, "rgb(251, 235, 79)", "200px");
             }}
           >
             EXPLORE FURTHER

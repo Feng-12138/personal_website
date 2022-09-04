@@ -77,3 +77,22 @@
     transition-timing-function: ease;
     transition-delay: 0s;
 }
+
+.buttonEducation {
+    color: black;
+    position: absolute;
+    font-family: "Montserrat";
+    font-size: 13px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(251, 235, 79);
+    border-bottom-width: 0.5rem;
+    line-height: 12%;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
