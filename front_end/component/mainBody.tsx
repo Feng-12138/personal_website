@@ -47,7 +47,11 @@ export default function MainBody() {
   const educationTextOne =
     "University of Waterloo, Bachelor of Mathematics, Major in Computer Science, AI Specialization, Minor in Combinatorics & Optimization, level 3A";
 
-  const educationTextTwo = "current CGPA ";
+  const educationTextTwo =
+    "CGPA 93.75/100, together with highest performance rating(outstanding) in all work terms";
+
+  const educationTextThree =
+    "Equipped with strong fundemental Computer Science theories through course taken";
   return (
     <div>
       <HeadBar />
@@ -110,34 +114,23 @@ export default function MainBody() {
           >
             Most Outstanding Academic Record
           </div>
-          <ListText
-            text="University of Waterloo, Bachelor of Mathematics, Major in Computer
-              Science, AI Specialization, Minor in Combinatorics & Optimization"
-            windowWidth={windowWidth}
-          />
+          <ListText text={educationTextOne} windowWidth={windowWidth} />
+          <ListText text={educationTextThree} windowWidth={windowWidth} />
+          <ListText text={educationTextTwo} windowWidth={windowWidth} />
           <div
+            // className={styles.buttonTextTransition}
             style={{
-              paddingLeft: windowWidth >= 1580 ? 150 : 50,
-              marginTop: 30,
-              alignContent: "top",
-              marginBottom: 30,
+              color: "black",
+              position: "absolute",
+            }}
+            onMouseEnter={(el) =>
+              handleMouseOnButton(el, "rgb(255, 255, 255)", "200px")
+            }
+            onMouseLeave={(el) => {
+              handleMouseLeaveButton(el, "#666666", "200px");
             }}
           >
-            <span
-              style={{
-                marginRight: 18,
-                marginLeft: -30,
-                fontSize: 21,
-                fontWeight: "bold",
-              }}
-            >
-              {" "}
-              ࠰{" "}
-            </span>
-            <span className={styles.listFontStyle}>
-              University of Waterloo, Bachelor of Mathematics, Major in Computer
-              Science, AI Specialization, Minor in Combinatorics & Optimization
-            </span>
+            EXPLORE FURTHER
           </div>
         </div>
       </div>
