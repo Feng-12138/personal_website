@@ -1,5 +1,7 @@
 
-html,
+html {
+  width: fit-content
+}
 body {
   padding: 0;
   margin: 0;

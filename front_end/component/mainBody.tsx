@@ -140,15 +140,52 @@ export default function MainBody() {
               marginLeft:
                 ((windowWidth - 410 - 200) / (1440 - 410 - 200)) * 600,
               marginTop: "50px",
+              whiteSpace: "nowrap",
+              maxWidth: 125,
             }}
             onMouseEnter={(el) =>
               handleMouseOnButton(el, "rgb(251, 235, 79)", "200px")
             }
             onMouseLeave={(el) => {
-              handleMouseLeaveButton(el, "rgb(251, 235, 79)", "200px");
+              handleMouseLeaveButton(el, "rgb(251, 235, 79)", "125px");
             }}
           >
             EXPLORE FURTHER
+          </div>
+        </div>
+      </div>
+      <div
+        className={styles.darkCard1}
+        style={{
+          paddingLeft: 105,
+          paddingRight: 205,
+          textAlign: "left",
+          whiteSpace: "normal",
+        }}
+      >
+        <div className={styles.headerText} style={{ width: "100%" }}>
+          {" "}
+          Grow Like Nasdaq!
+          <div
+            style={{
+              width: "100%",
+              color: "#9a9a9a",
+              fontFamily: "Montserrat",
+              fontStyle: "normal",
+              marginRight: "200px",
+              fontSize: 17,
+              marginTop: 10,
+            }}
+          >
+            Adepted Software Development skills and Proven Work Ethic guarantee
+            my success in any technical positions
+          </div>
+          <div style={{ display: "flex" }}>
+            <span>
+              <div style={{ fontSize: 32 }}>Talka.ai</div>
+              <div></div>
+            </span>
+            <span>TribalScale</span>
           </div>
         </div>
       </div>
