@@ -13,6 +13,7 @@ import WorkingInfo from "./workingInfo";
 
 export default function MainBody() {
   const [windowWidth, setWindowWidth] = useState(1440);
+  const [screenWidth, setScreenWidth] = useState(1440);
   const handleMouseOnPhoto = (el: any) => {
     el.target.style.filter = "";
   };
@@ -46,9 +47,16 @@ export default function MainBody() {
   useEffect(() => {
     function updateSize() {
       setWindowWidth(window.innerWidth);
+      if (window.innerWidth <= 1440) {
+        document.documentElement.style.width = "fit-content";
+      } else {
+        document.documentElement.style.width = "100%";
+      }
     }
     window.addEventListener("resize", updateSize);
+    // console.log(document);
     updateSize();
+
     return () => window.removeEventListener("resize", updateSize);
   }, []);
 
@@ -171,15 +179,22 @@ export default function MainBody() {
         </div>
       </div>
       <div
+        className={styles.greyDecorate}
+        style={{ marginLeft: windowWidth * 0.92 }}
+      ></div>
+      <div
         className={styles.darkCard1}
         style={{
           paddingLeft: 105,
           paddingRight: 205,
           textAlign: "left",
-          whiteSpace: "normal",
+          // whiteSpace: "normal",
         }}
       >
-        <div className={styles.headerText} style={{ width: "100%" }}>
+        <div
+          className={styles.headerText}
+          style={{ width: "100%", zIndex: 20 }}
+        >
           {" "}
           Grow Like Nasdaq!
           <div

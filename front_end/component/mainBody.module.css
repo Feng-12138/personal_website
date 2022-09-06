@@ -18,6 +18,15 @@
     cursor: pointer;
 }
 
+.greyDecorate {
+    background-color: rgb(154, 154, 154);
+    width: 15px;
+    height: 250px;
+    position: absolute;
+    margin-top: -120px;
+    margin-left: 1100px;
+}
+
 .listFontStyle {
     font-family: "Monterrat";
     font-size: 14px;
