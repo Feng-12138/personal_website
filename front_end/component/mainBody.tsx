@@ -86,7 +86,7 @@ export default function MainBody() {
     <div>
       <HeadBar />
       <div className={styles.darkCard1}>
-        <span>
+        <span style={{ whiteSpace: "nowrap" }}>
           <span
             className={styles.headerText}
             style={{
@@ -107,6 +107,7 @@ export default function MainBody() {
           </div>
           <div
             className={styles.buttonTextTransition}
+            style={{ whiteSpace: "nowrap" }}
             onMouseEnter={(el) =>
               handleMouseOnButton(el, "rgb(255, 255, 255)", "130px")
             }
@@ -241,9 +242,9 @@ export default function MainBody() {
               View&nbsp; Details
             </Button>
           </div>
-          <div></div>
         </div>
       </div>
+      <div className={styles.whiteCard1}>Too Young to Enjoy Life</div>
     </div>
   );
 }

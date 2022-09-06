@@ -20,7 +20,7 @@ export default function HeadBar() {
         justifyContent: "space-between",
         alignItems: "center",
         zIndex: 100,
-        whiteSpace: "nowrap",
+        // whiteSpace: "nowrap",
         backgroundColor: "white",
         top: "-0.1px",
         position: "sticky",

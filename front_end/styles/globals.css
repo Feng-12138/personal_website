@@ -52,7 +52,7 @@ a {
   font-style: normal;
   font-weight: 600;
   font-size: 4rem;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   color: white
 }
 

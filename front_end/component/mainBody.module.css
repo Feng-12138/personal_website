@@ -16,6 +16,7 @@
     height: 420px;
     opacity: 1;
     cursor: pointer;
+    -webkit-user-drag: none;
 }
 
 .greyDecorate {
@@ -45,7 +46,7 @@
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .whiteCard1 {
