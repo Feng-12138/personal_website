@@ -4,6 +4,7 @@ import router from "next/router";
 require("typeface-eb-garamond");
 import "@fontsource/montserrat";
 import { GiWindHole } from "react-icons/gi";
+import { useState, useEffect } from "react";
 
 const theme = createTheme({
   components: {
@@ -27,11 +28,27 @@ const theme = createTheme({
 });
 
 function HomePage(props: {}) {
+  const [windowWidth, setWindowWidth] = useState(1440);
+  useEffect(() => {
+    function updateSize() {
+      setWindowWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
   const handleEnterMainPage = () => {
     router.push("/main?account=yiran");
   };
   return (
-    <div style={{ height: "100vh", background: "black" }}>
+    <div
+      style={{
+        height: "100vh",
+        backgroundColor: "black",
+        zIndex: 20,
+        width: windowWidth,
+      }}
+    >
       <div className="waterPrint">
         <span>By 20-</span>
         <GiWindHole />

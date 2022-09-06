@@ -1,6 +1,7 @@
 
 html {
-  width: fit-content
+  width: fit-content;
+  /* background-color: black; */
 }
 body {
   padding: 0;

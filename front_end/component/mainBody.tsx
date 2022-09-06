@@ -6,7 +6,9 @@ import router from "next/router";
 import { yellow } from "@mui/material/colors";
 require("typeface-eb-garamond");
 import { useEffect, useState, useLayoutEffect } from "react";
+import { Button } from "@mui/material";
 import { ListText } from "./listText";
+import WorkingInfo from "./workingInfo";
 //  Adequate Tech Stack for fullstack Development
 
 export default function MainBody() {
@@ -58,6 +60,20 @@ export default function MainBody() {
 
   const educationTextThree =
     "Equipped with strong fundemental Computer Science theories through course taken";
+
+  const informationTalka = {
+    link: "https://www.talka.ai/",
+    name: "Talka.ai",
+    title: "Software Engineering Intern",
+    time: "MAY 2022 - AUG 2022",
+  };
+
+  const informationTribalScale = {
+    link: "https://www.tribalscale.com/",
+    name: "TribalScale.Inc",
+    title: "Quality Assurance Engineer",
+    time: "SEP 2021 - DEC 2021",
+  };
   return (
     <div>
       <HeadBar />
@@ -180,13 +196,37 @@ export default function MainBody() {
             Adepted Software Development skills and Proven Work Ethic guarantee
             my success in any technical positions
           </div>
-          <div style={{ display: "flex" }}>
-            <span>
-              <div style={{ fontSize: 32 }}>Talka.ai</div>
-              <div></div>
-            </span>
-            <span>TribalScale</span>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: 50,
+              marginLeft: -40,
+            }}
+          >
+            <WorkingInfo information={informationTalka} />
+            <WorkingInfo information={informationTribalScale} />
           </div>
+          <div
+            style={{ display: "flex", justifyContent: "center", marginTop: 40 }}
+          >
+            <Button
+              variant="outlined"
+              style={{
+                color: "white",
+                borderColor: "white",
+                borderRadius: 0,
+                fontFamily: "Montserrat",
+                fontSize: 13,
+                height: 40,
+                width: 125,
+                textTransform: "none",
+              }}
+            >
+              View&nbsp; Details
+            </Button>
+          </div>
+          <div></div>
         </div>
       </div>
     </div>
