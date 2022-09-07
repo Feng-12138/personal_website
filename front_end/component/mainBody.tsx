@@ -22,6 +22,9 @@ export default function MainBody() {
   };
 
   const handleMouseOnButton = (el: any, color: string, maxWidth: string) => {
+    if (el.target.innerHTML == "Check Details") {
+      el.target = el.target.parentElement;
+    }
     el.target.style.borderBottomColor = color;
     el.target.style.borderBottomWidth = "0.2rem";
     el.target.style.maxWidth = maxWidth;
@@ -33,6 +36,9 @@ export default function MainBody() {
     color: string,
     originalWidth: string
   ) => {
+    if (el.target.innerHTML == "Check Details") {
+      el.target = el.target.parentElement;
+    }
     el.target.style.borderBottomColor = color;
     el.target.style.maxWidth = originalWidth;
     el.target.style.lineHeight = "12%";
@@ -54,7 +60,6 @@ export default function MainBody() {
       }
     }
     window.addEventListener("resize", updateSize);
-    // console.log(document);
     updateSize();
 
     return () => window.removeEventListener("resize", updateSize);
@@ -81,6 +86,12 @@ export default function MainBody() {
     name: "TribalScale.Inc",
     title: "Quality Assurance Engineer",
     time: "SEP 2021 - DEC 2021",
+  };
+
+  const projectPersonalWebsite = {
+    name: "Personal Website",
+    description:
+      "- Provides abilities for registered users to obtain and modify their own personal website through their unique account ids, no matter they have previous programming skills or not",
   };
   return (
     <div>
@@ -244,7 +255,108 @@ export default function MainBody() {
           </div>
         </div>
       </div>
-      <div className={styles.whiteCard1}>Too Young to Enjoy Life</div>
+      <div
+        className={styles.whiteCard1}
+        style={{
+          textAlign: "center",
+          display: "flex",
+          justifyContent: "space-around",
+          paddingTop: 70,
+          paddingLeft: 60,
+          paddingRight: 60,
+        }}
+      >
+        <div
+          className={styles.headerText}
+          style={{
+            color: "black",
+            borderBottomStyle: "solid",
+            borderBottomColor: "rgb(251, 235, 79)",
+            borderBottomWidth: 10,
+            lineHeight: "48%",
+            whiteSpace: "nowrap",
+            position: "absolute",
+          }}
+        >
+          Too Young to Enjoy Life
+        </div>
+        <div
+          style={{
+            marginTop: 80,
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-around",
+          }}
+        >
+          <span
+            style={{
+              backgroundColor: "#f5f5f5",
+              paddingTop: 20,
+              paddingBottom: 20,
+              width: "30%",
+            }}
+          >
+            <div
+              style={{
+                fontSize: 32,
+                fontFamily: "EB Garamond",
+                fontWeight: 600,
+                width: "100%",
+                textAlign: "center",
+                paddingLeft: 75,
+                paddingRight: 75,
+              }}
+            >
+              Personal Website
+            </div>
+            <div
+              style={{
+                fontFamily: "Montserrat",
+                fontSize: 13,
+                textAlign: "left",
+                paddingLeft: 40,
+                paddingRight: 40,
+                marginTop: 20,
+                lineHeight: 1.4,
+              }}
+            >
+              {projectPersonalWebsite.description}
+            </div>
+            <div
+              style={{
+                fontSize: 13,
+                fontFamily: "Montserrat",
+                textTransform: "uppercase",
+                fontStyle: "normal",
+                marginTop: 50,
+                marginLeft: "60%",
+                lineHeight: "12%",
+                borderBottomColor: "rgb(251, 235, 79)",
+                borderBottomWidth: "7px",
+                borderBottomStyle: "solid",
+                maxWidth: 70,
+                whiteSpace: "nowrap",
+                marginBottom: 10,
+              }}
+              onMouseEnter={(el) =>
+                handleMouseOnButton(el, "rgb(251, 235, 79)", "105.82px")
+              }
+              onMouseLeave={(el) =>
+                handleMouseLeaveButton(el, "rgb(251, 235, 79)", "70px")
+              }
+            >
+              <a
+                href="https://github.com/Feng-12138/personal_website"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Check Details
+              </a>
+            </div>
+          </span>
+          <span style={{ backgroundColor: "#f5f5f5" }}></span>
+        </div>
+      </div>
     </div>
   );
 }

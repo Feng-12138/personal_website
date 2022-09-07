@@ -80,7 +80,7 @@ export default function HeadBar() {
           whiteSpace: "nowrap",
         }}
       >
-        Contract Me
+        Contact Me
       </Button>
     </div>
   );
