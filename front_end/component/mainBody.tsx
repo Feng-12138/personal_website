@@ -9,6 +9,7 @@ import { useEffect, useState, useLayoutEffect } from "react";
 import { Button } from "@mui/material";
 import { ListText } from "./listText";
 import WorkingInfo from "./workingInfo";
+import { ProjectInfo } from "./projectInfo";
 //  Adequate Tech Stack for fullstack Development
 
 export default function MainBody() {
@@ -92,6 +93,14 @@ export default function MainBody() {
     name: "Personal Website",
     description:
       "- Provides abilities for registered users to obtain and modify their own personal website through their unique account ids, no matter they have previous programming skills or not",
+    href: "https://github.com/Feng-12138/personal_website",
+  };
+
+  const projectClickUp = {
+    name: "ClickUp <> Sheet",
+    description:
+      "-Users are able to interact between google sheet and clickUp ticket tracker automatically(import tickets from clickup, upload selected columns to clickup...)",
+    href: " https://github.com/Feng-12138/clickup-public-version",
   };
   return (
     <div>
@@ -282,81 +291,20 @@ export default function MainBody() {
         </div>
         <div
           style={{
-            marginTop: 80,
+            marginTop: 110,
             width: "100%",
             display: "flex",
             justifyContent: "space-around",
           }}
         >
-          <span
-            style={{
-              backgroundColor: "#f5f5f5",
-              paddingTop: 20,
-              paddingBottom: 20,
-              width: "30%",
-            }}
-          >
-            <div
-              style={{
-                fontSize: 32,
-                fontFamily: "EB Garamond",
-                fontWeight: 600,
-                width: "100%",
-                textAlign: "center",
-                paddingLeft: 75,
-                paddingRight: 75,
-              }}
-            >
-              Personal Website
-            </div>
-            <div
-              style={{
-                fontFamily: "Montserrat",
-                fontSize: 13,
-                textAlign: "left",
-                paddingLeft: 40,
-                paddingRight: 40,
-                marginTop: 20,
-                lineHeight: 1.4,
-              }}
-            >
-              {projectPersonalWebsite.description}
-            </div>
-            <div
-              style={{
-                fontSize: 13,
-                fontFamily: "Montserrat",
-                textTransform: "uppercase",
-                fontStyle: "normal",
-                marginTop: 50,
-                marginLeft: "60%",
-                lineHeight: "12%",
-                borderBottomColor: "rgb(251, 235, 79)",
-                borderBottomWidth: "7px",
-                borderBottomStyle: "solid",
-                maxWidth: 70,
-                whiteSpace: "nowrap",
-                marginBottom: 10,
-              }}
-              onMouseEnter={(el) =>
-                handleMouseOnButton(el, "rgb(251, 235, 79)", "105.82px")
-              }
-              onMouseLeave={(el) =>
-                handleMouseLeaveButton(el, "rgb(251, 235, 79)", "70px")
-              }
-            >
-              <a
-                href="https://github.com/Feng-12138/personal_website"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Check Details
-              </a>
-            </div>
-          </span>
-          <span style={{ backgroundColor: "#f5f5f5" }}></span>
+          <ProjectInfo
+            projectInfo={projectPersonalWebsite}
+            windowWidth={windowWidth}
+          />
+          <ProjectInfo projectInfo={projectClickUp} windowWidth={windowWidth} />
         </div>
       </div>
+      <div style={{ height: 100, color: "black" }}> ab</div>
     </div>
   );
 }
