@@ -35,7 +35,8 @@ export const ProjectInfo = (props: {
         paddingTop: 20,
         paddingBottom: 20,
         width: "30%",
-        height: (1440 / windowWidth) * 260,
+        height: (1440 / windowWidth) * 300 + 50,
+        maxHeight: 350,
       }}
     >
       <div
@@ -63,6 +64,19 @@ export const ProjectInfo = (props: {
         }}
       >
         {projectInfo.description}
+      </div>
+      <div
+        style={{
+          fontFamily: "Montserrat",
+          fontSize: 13,
+          textAlign: "left",
+          paddingLeft: 40,
+          paddingRight: 40,
+          marginTop: 20,
+          lineHeight: 1.4,
+        }}
+      >
+        {projectInfo.description2}
       </div>
       <div
         style={{
