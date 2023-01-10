@@ -1,6 +1,7 @@
-import { Button } from "@mui/material";
+import { Button, Paper } from "@mui/material";
 import styles from "./headBar.module.css";
 import { GiWindHole } from "react-icons/gi";
+import Router from "next/router";
 
 export default function HeadBar() {
   const handleHover = (el: any) => {
@@ -12,6 +13,10 @@ export default function HeadBar() {
     el.target.style.borderBottomStyle = "";
     el.target.style.borderBottomColor = "";
     el.target.style.borderBottomWidth = "";
+  };
+
+  const handleRedirect = (page: string) => {
+    Router.push(`/${page}?account=yiran`);
   };
   return (
     <div
@@ -26,62 +31,79 @@ export default function HeadBar() {
         position: "sticky",
       }}
     >
-      <div className={styles.container}>
-        <div style={{ fontSize: "1.6rem", fontWeight: 500 }}>
-          <span>20-</span>
-          <GiWindHole />
-          <span>-40</span>
-        </div>
-        <span
-          onMouseOver={handleHover}
-          onMouseLeave={handleLeave}
-          style={{ maxHeight: "17.5px" }}
-        >
-          Qualifications
-        </span>
-        <span
-          onMouseOver={handleHover}
-          onMouseLeave={handleLeave}
-          style={{ maxHeight: "17.5px" }}
-        >
-          Education
-        </span>
-        <span
-          onMouseOver={handleHover}
-          onMouseLeave={handleLeave}
-          style={{ maxHeight: "17.5px" }}
-        >
-          {" "}
-          Working Experience
-        </span>
-        <span
-          onMouseOver={handleHover}
-          onMouseLeave={handleLeave}
-          style={{ maxHeight: "17.5px" }}
-        >
-          Projects
-        </span>
-      </div>
-      <Button
-        variant="outlined"
+      <Paper
         style={{
-          color: "black",
-          borderColor: "#80774f",
-          borderWidth: "2px",
-          borderRadius: 0,
-          fontFamily: "Montserrat",
-          fontSize: "13px",
-          fontWeight: 600,
-          height: "40px",
-          marginTop: "10px",
-          width: "10%",
-          textTransform: "none",
-          marginRight: 60,
-          whiteSpace: "nowrap",
+          height: "13vh",
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
         }}
       >
-        Contact Me
-      </Button>
+        <div className={styles.container}>
+          <div
+            style={{ fontSize: "1.6rem", fontWeight: 500 }}
+            onClick={() => handleRedirect("main")}
+          >
+            <span>20-</span>
+            <GiWindHole />
+            <span>-40</span>
+          </div>
+          <span
+            onMouseOver={handleHover}
+            onMouseLeave={handleLeave}
+            style={{ maxHeight: "17.5px" }}
+            onClick={() => handleRedirect("qualifications")}
+          >
+            Qualifications
+          </span>
+          <span
+            onMouseOver={handleHover}
+            onMouseLeave={handleLeave}
+            style={{ maxHeight: "17.5px" }}
+            onClick={() => handleRedirect("education")}
+          >
+            Education
+          </span>
+          <span
+            onMouseOver={handleHover}
+            onMouseLeave={handleLeave}
+            style={{ maxHeight: "17.5px" }}
+            onClick={() => handleRedirect("working_experience")}
+          >
+            {" "}
+            Working Experience
+          </span>
+          <span
+            onMouseOver={handleHover}
+            onMouseLeave={handleLeave}
+            style={{ maxHeight: "17.5px" }}
+            onClick={() => handleRedirect("projects")}
+          >
+            Projects
+          </span>
+        </div>
+        <Button
+          variant="outlined"
+          style={{
+            color: "black",
+            borderColor: "#80774f",
+            borderWidth: "2px",
+            borderRadius: 0,
+            fontFamily: "Montserrat",
+            fontSize: "13px",
+            fontWeight: 600,
+            height: "40px",
+            marginTop: "10px",
+            width: "10%",
+            textTransform: "none",
+            marginRight: 60,
+            whiteSpace: "nowrap",
+          }}
+        >
+          Contact Me
+        </Button>
+      </Paper>
     </div>
   );
 }

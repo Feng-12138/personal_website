@@ -5,7 +5,7 @@ import "@fontsource/montserrat";
 import router from "next/router";
 import { yellow } from "@mui/material/colors";
 require("typeface-eb-garamond");
-import { useEffect, useState, useLayoutEffect } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@mui/material";
 import { ListText } from "./listText";
 import WorkingInfo from "./workingInfo";
@@ -82,6 +82,13 @@ export default function MainBody() {
     time: "MAY 2022 - AUG 2022",
   };
 
+  const informationHuawei = {
+    link: "https://www.huawei.com/ca/",
+    name: "Huawei Canada",
+    title: "Compiler Software Engineering",
+    time: "JAN 2023 - APR 2023",
+  };
+
   const informationTribalScale = {
     link: "https://www.tribalscale.com/",
     name: "TribalScale.Inc",
@@ -89,17 +96,19 @@ export default function MainBody() {
     time: "SEP 2021 - DEC 2021",
   };
 
-  const projectPersonalWebsite = {
-    name: "Personal Website",
+  const projectMeInLoo = {
+    name: "Me-In-Loo",
     description:
-      "- Provides abilities for registered users to obtain and modify their own personal website through their unique account ids, no matter they have previous programming skills or not",
-    href: "https://github.com/Feng-12138/personal_website",
+      "- Allows users to view, upload, and download memes and emojis. Also supports features include report, like, and Tags",
+    description2:
+      "- Use MySQL and minIO for data storage, Flask for backend development and Next.js(react) for frontend",
+    href: "https://github.com/joycedaiyt/Me-In-Loo",
   };
 
   const projectClickUp = {
     name: "ClickUp <> Sheet",
     description:
-      "-Users are able to interact between google sheet and clickUp ticket tracker automatically(import tickets from clickup, upload selected columns to clickup...)",
+      "- Users are able to interact between google sheet and clickUp ticket tracker automatically(import tickets from clickup, upload selected columns to clickup...)",
     href: " https://github.com/Feng-12138/clickup-public-version",
   };
   return (
@@ -236,10 +245,11 @@ export default function MainBody() {
             style={{
               display: "flex",
               justifyContent: "space-between",
-              marginTop: 50,
+              marginTop: 80,
               marginLeft: -40,
             }}
           >
+            <WorkingInfo information={informationHuawei} />
             <WorkingInfo information={informationTalka} />
             <WorkingInfo information={informationTribalScale} />
           </div>
@@ -255,8 +265,9 @@ export default function MainBody() {
                 fontFamily: "Montserrat",
                 fontSize: 13,
                 height: 40,
-                width: 125,
+                width: "20%",
                 textTransform: "none",
+                marginTop: 40,
               }}
             >
               View&nbsp; Details
@@ -297,14 +308,37 @@ export default function MainBody() {
             justifyContent: "space-around",
           }}
         >
-          <ProjectInfo
-            projectInfo={projectPersonalWebsite}
-            windowWidth={windowWidth}
-          />
+          <ProjectInfo projectInfo={projectMeInLoo} windowWidth={windowWidth} />
           <ProjectInfo projectInfo={projectClickUp} windowWidth={windowWidth} />
         </div>
       </div>
-      <div style={{ height: 100, color: "black" }}> ab</div>
+      <div
+        style={{
+          // height: 100,
+          marginTop: 50,
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Button
+          variant="outlined"
+          style={{
+            borderColor: "#80774f",
+            color: "black",
+            width: "15%",
+            borderWidth: "2px",
+            borderRadius: 0,
+            fontFamily: "Montserrat",
+            fontSize: 13,
+            textTransform: "none",
+            fontWeight: 500,
+            marginBottom: 50,
+          }}
+        >
+          {" "}
+          Visit All Projects
+        </Button>
+      </div>
     </div>
   );
 }
