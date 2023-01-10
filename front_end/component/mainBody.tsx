@@ -314,11 +314,10 @@ export default function MainBody() {
       </div>
       <div
         style={{
-          height: 100,
+          // height: 100,
           marginTop: 50,
           display: "flex",
           justifyContent: "center",
-          marginBottom: 50,
         }}
       >
         <Button
@@ -333,6 +332,7 @@ export default function MainBody() {
             fontSize: 13,
             textTransform: "none",
             fontWeight: 500,
+            marginBottom: 50,
           }}
         >
           {" "}
