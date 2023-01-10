@@ -55,6 +55,7 @@ export const QualificationBody = () => {
       </div>
       <QualificationField fieldName="Languages" />
       <QualificationField fieldName="Frameworks & Databases" />
+      <QualificationField fieldName="DevOps & Tools" />
     </div>
   );
 };
