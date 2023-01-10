@@ -5,7 +5,7 @@ import "@fontsource/montserrat";
 import router from "next/router";
 import { yellow } from "@mui/material/colors";
 require("typeface-eb-garamond");
-import { useEffect, useState, useLayoutEffect } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@mui/material";
 import { ListText } from "./listText";
 import WorkingInfo from "./workingInfo";
