@@ -53,6 +53,7 @@ export const RelatedCourses = () => {
         fontSize: 18,
         flexWrap: "wrap",
         marginTop: -40,
+        paddingBottom: 30,
       }}
     >
       {arrCourse.map((el, idx) => {
