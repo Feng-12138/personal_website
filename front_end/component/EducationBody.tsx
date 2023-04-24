@@ -2,6 +2,7 @@ import HeadBar from "./fullHeader";
 import styles from "./qualificationBody.module.css";
 import { CategorySeparator } from "./CategorySeparator";
 import { GPAAndTranscript } from "./GPAAndTranscript";
+import { RelatedCourses } from "./RelatedCourses";
 import "@fontsource/montserrat";
 require("typeface-eb-garamond");
 
@@ -50,8 +51,10 @@ export const EducationBody = () => {
         <div>A Quick Learner and a Man With Great Protential </div>
         <div>Proven by Outstanding Academic Records</div>
       </div>
-      <CategorySeparator name={"GPA & Transcript"}></CategorySeparator>
-      <GPAAndTranscript></GPAAndTranscript>
+      <CategorySeparator name={"GPA & Transcript"} />
+      <GPAAndTranscript />
+      <CategorySeparator name={"Taken CS & Math Courses"} />
+      <RelatedCourses />
     </div>
   );
 };

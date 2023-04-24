@@ -1,3 +1,6 @@
+import "@fontsource/montserrat";
+require("typeface-eb-garamond");
+
 export const CategorySeparator = (props: { name: string }) => {
   const { name } = props;
   return (

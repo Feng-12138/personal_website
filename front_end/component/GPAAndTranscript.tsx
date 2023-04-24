@@ -1,15 +1,16 @@
 import "@fontsource/montserrat";
 require("typeface-eb-garamond");
 import { Button } from "@mui/material";
-import Link from "next/link";
+
 export const GPAAndTranscript = () => {
   return (
     <div
       style={{
         marginTop: 50,
-        marginLeft: "6%",
+        marginLeft: "6.2%",
         marginRight: "6%",
         display: "flex",
+        alignItems: "center",
       }}
     >
       <span
@@ -22,17 +23,30 @@ export const GPAAndTranscript = () => {
         CGPA: 93.25 / 100
       </span>
       <Button
+        variant="contained"
         style={{
           borderRadius: 0,
-          color: "#80774f",
+          backgroundColor: "#80774f",
+          color: "white",
           fontFamily: "montserrat",
-          fontWeight: 500,
+          fontSize: 12,
+          fontWeight: 700,
           letterSpacing: 2,
+          marginLeft: "15%",
         }}
       >
-        <Link href="/SSR_TSRPT.pdf" target="_blank">
-          Download
-        </Link>
+        <a
+          href="/NewTranscript.pdf"
+          target="_blank"
+          style={{
+            paddingTop: 4,
+            paddingBottom: 4,
+            paddingLeft: 10,
+            paddingRight: 10,
+          }}
+        >
+          Transcript
+        </a>
       </Button>
     </div>
   );
