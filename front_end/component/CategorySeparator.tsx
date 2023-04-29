@@ -30,7 +30,7 @@ export const CategorySeparator = (props: { name: string }) => {
           fontWeight: 400,
         }}
       >
-        {name}: &nbsp;
+        {name} &nbsp;
       </div>
     </div>
   );
