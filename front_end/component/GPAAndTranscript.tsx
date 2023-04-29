@@ -38,6 +38,7 @@ export const GPAAndTranscript = () => {
         <a
           href="/NewTranscript.pdf"
           target="_blank"
+          rel="noopener noreferrer"
           style={{
             paddingTop: 4,
             paddingBottom: 4,
