@@ -83,26 +83,28 @@ export default function HeadBar() {
             Projects
           </span>
         </div>
-        <Button
-          variant="outlined"
-          style={{
-            color: "black",
-            borderColor: "#80774f",
-            borderWidth: "2px",
-            borderRadius: 0,
-            fontFamily: "Montserrat",
-            fontSize: "13px",
-            fontWeight: 600,
-            height: "40px",
-            marginTop: "10px",
-            width: "10%",
-            textTransform: "none",
-            marginRight: 60,
-            whiteSpace: "nowrap",
-          }}
-        >
-          Contact Me
-        </Button>
+        <a href="mailto:y598sun@uwaterloo.ca">
+          <Button
+            variant="outlined"
+            style={{
+              color: "black",
+              borderColor: "#80774f",
+              borderWidth: "2px",
+              borderRadius: 0,
+              fontFamily: "Montserrat",
+              fontSize: "13px",
+              fontWeight: 600,
+              height: "40px",
+              marginTop: "10px",
+              width: "85%",
+              textTransform: "none",
+              marginRight: 60,
+              whiteSpace: "nowrap",
+            }}
+          >
+            Contact Me
+          </Button>
+        </a>
       </Paper>
     </div>
   );

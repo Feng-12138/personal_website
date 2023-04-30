@@ -105,12 +105,15 @@ export default function MainBody() {
     href: "https://github.com/joycedaiyt/Me-In-Loo",
   };
 
-  const projectClickUp = {
-    name: "ClickUp <> Sheet",
+  const projectPersonalWebsite = {
+    name: "Personal Website",
     description:
-      "- Users are able to interact between google sheet and clickUp ticket tracker automatically(import tickets from clickup, upload selected columns to clickup...)",
+      "- Provide Users opportunities to obtain their customized personal Website, and share it to the recruiters",
+    description2:
+      "- Use Next.js for frontend, Express for backend and MongoDB as the database",
     href: " https://github.com/Feng-12138/clickup-public-version",
   };
+
   return (
     <div>
       <HeadBar />
@@ -142,6 +145,9 @@ export default function MainBody() {
             }
             onMouseLeave={(el) => {
               handleMouseLeaveButton(el, "#666666", "100px");
+            }}
+            onClick={() => {
+              handleRedirection("qualifications", "yiran");
             }}
           >
             EXPLORE MORE
@@ -202,6 +208,9 @@ export default function MainBody() {
             }
             onMouseLeave={(el) => {
               handleMouseLeaveButton(el, "rgb(251, 235, 79)", "125px");
+            }}
+            onClick={() => {
+              handleRedirection("education", "yiran");
             }}
           >
             EXPLORE FURTHER
@@ -269,6 +278,9 @@ export default function MainBody() {
                 textTransform: "none",
                 marginTop: 40,
               }}
+              onClick={() => {
+                handleRedirection("working_experience", "yiran");
+              }}
             >
               View&nbsp; Details
             </Button>
@@ -309,7 +321,10 @@ export default function MainBody() {
           }}
         >
           <ProjectInfo projectInfo={projectMeInLoo} windowWidth={windowWidth} />
-          <ProjectInfo projectInfo={projectClickUp} windowWidth={windowWidth} />
+          <ProjectInfo
+            projectInfo={projectPersonalWebsite}
+            windowWidth={windowWidth}
+          />
         </div>
       </div>
       <div
@@ -333,6 +348,9 @@ export default function MainBody() {
             textTransform: "none",
             fontWeight: 500,
             marginBottom: 50,
+          }}
+          onClick={() => {
+            handleRedirection("projects", "yiran");
           }}
         >
           {" "}
