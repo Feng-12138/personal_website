@@ -2,12 +2,10 @@ import { CompanyInfo } from "./CompanyInfo";
 import { Button } from "@mui/material";
 import styles from "./qualificationBody.module.css";
 import HeadBar from "./fullHeader";
-import "@fontsource/montserrat";
-import Head from "next/head";
-import { CategorySeparator } from "./CategorySeparator";
 import HuaweiPhoto from "../images/Huawei.jpg";
 import TribalPhoto from "../images/TribalScale.jpg";
 import TalkaPhoto from "../images/Talka.png";
+import "@fontsource/montserrat";
 require("typeface-eb-garamond");
 
 export default function WorkingExperienceMain() {

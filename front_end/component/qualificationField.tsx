@@ -17,6 +17,7 @@ import Git from "../images/icons8-git-150.png";
 import Postman from "../images/getpostman-icon.svg";
 import MinIO from "../images/logo.svg";
 import LLVM from "../images/LLVM_logo.png";
+import Vulkan from "../images/vulkan-logo.svg";
 
 export const QualificationField = (props: { fieldName: string }) => {
   const { fieldName } = props;
@@ -364,6 +365,42 @@ export const QualificationField = (props: { fieldName: string }) => {
             </a>
           </div>
         </div>
+        <div style={{ marginTop: 50, marginLeft: 110 }}>
+          <div>
+            <a
+              href={"https://en.wikipedia.org/wiki/LLVM"}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ cursor: "pointer" }}
+            >
+              <img
+                src={LLVM.src}
+                style={{
+                  filter: "contrast(100%) saturate(200%)",
+                  marginRight: 80,
+                }}
+                width="120"
+                height="85"
+              ></img>
+            </a>
+            <a
+              href={"https://www.vulkan.org/"}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ cursor: "pointer" }}
+            >
+              <img
+                src={Vulkan.src}
+                style={{
+                  filter: "contrast(100%) saturate(200%)",
+                  marginRight: 80,
+                }}
+                width="120"
+                height="85"
+              ></img>
+            </a>
+          </div>
+        </div>
       </div>
     );
   } else {
@@ -480,22 +517,6 @@ export const QualificationField = (props: { fieldName: string }) => {
                   marginRight: 80,
                 }}
                 width="90"
-                height="85"
-              ></img>
-            </a>
-            <a
-              href={"https://en.wikipedia.org/wiki/LLVM"}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ cursor: "pointer" }}
-            >
-              <img
-                src={LLVM.src}
-                style={{
-                  filter: "contrast(100%) saturate(200%)",
-                  marginRight: 80,
-                }}
-                width="120"
                 height="85"
               ></img>
             </a>
