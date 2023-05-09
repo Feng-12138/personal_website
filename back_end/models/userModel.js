@@ -2,11 +2,12 @@ const crypto = require('crypto');
 const mongoose = require('mongoose');
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
+import { nanoid } from 'nanoid'
 
 const userSchema = new mongoose.Schema({
-    userid: {
+    _id: {
         type: String,
-        required: [true, "Backend should generate the userId"]
+        default: nanoid()
     },
     email: {
         type: String,
@@ -17,6 +18,10 @@ const userSchema = new mongoose.Schema({
         required: [true, 'User should give password'],
         minlength: 8,
         select: false
+    },
+    name: {
+        type: String,
+        required: [true, 'User should give its name'],
     },
     active: {
         type: Boolean,
