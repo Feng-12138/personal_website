@@ -1,12 +1,19 @@
 const express = require('express');
-const qualificationController = require('./../controllers/tourController');
+const qualificationController = require('./../controllers/qualificationController');
+
 const authController = require('./../controllers/authController');
 
 const router = express.Router();
 
-router.route('/postOrUpdateQualification').post(
+router.route('/createQualification').post(
     authController.protect,
-    qualificationController.uploadOrUpdateQualification
+    qualificationController.createQualification
+);
+
+
+router.route('/updateQualification').put(
+    authController.protect,
+    qualificationController.updateQualification
 );
 
 router.route('/getQualification').get(

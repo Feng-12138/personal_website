@@ -1,13 +1,13 @@
 const crypto = require('crypto');
 const mongoose = require('mongoose');
-const validator = require('validator');
 const bcrypt = require('bcryptjs');
-import { nanoid } from 'nanoid'
+const { v4 } = require('uuid');
+// const nanoid = require('nanoid')
 
 const userSchema = new mongoose.Schema({
     _id: {
         type: String,
-        default: nanoid()
+        default: v4()
     },
     email: {
         type: String,
@@ -61,8 +61,6 @@ userSchema.methods.createPasswordResetToken = function() {
       .createHash('sha256')
       .update(resetToken)
       .digest('hex');
-  
-    // console.log({ resetToken }, this.passwordResetToken);
   
     this.passwordResetExpires = Date.now() + 10 * 60 * 1000;
   

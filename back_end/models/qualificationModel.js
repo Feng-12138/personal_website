@@ -18,4 +18,4 @@ user: {
 });
 
 const Qualification = mongoose.model('Qualification', qualificationSchema);
-
+module.exports = Qualification
