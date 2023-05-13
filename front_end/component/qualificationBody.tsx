@@ -53,8 +53,24 @@ export const QualificationBody = () => {
         {" "}
         with fullStack Toolkit
       </div>
+      <div
+        style={{
+          paddingLeft: "6%",
+          marginTop: 90,
+          fontFamily: "montserrat",
+          color: "#80774f",
+          display: "flex",
+          alignContent: "center",
+        }}
+      >
+        <span>
+          <div>Decent Understanding on Various Software</div>
+          <div>Architectures and Development Tools with</div>
+          <div>the goal to become a Software Architect</div>
+        </span>
+      </div>
       <QualificationField fieldName="Languages" />
-      <QualificationField fieldName="Frameworks & Databases" />
+      <QualificationField fieldName="Frameworks & Storage Platforms" />
       <QualificationField fieldName="DevOps & Tools" />
     </div>
   );
