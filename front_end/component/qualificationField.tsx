@@ -18,6 +18,7 @@ import Postman from "../images/getpostman-icon.svg";
 import MinIO from "../images/logo.svg";
 import LLVM from "../images/LLVM_logo.png";
 import Vulkan from "../images/vulkan-logo.svg";
+import Redis from "../images/Redis_Icon.png";
 
 export const QualificationField = (props: { fieldName: string }) => {
   const { fieldName } = props;
@@ -234,7 +235,7 @@ export const QualificationField = (props: { fieldName: string }) => {
         </div>
       </div>
     );
-  } else if (fieldName == "Frameworks & Databases") {
+  } else if (fieldName == "Frameworks & Storage Platforms") {
     return (
       <div
         style={{
@@ -367,6 +368,22 @@ export const QualificationField = (props: { fieldName: string }) => {
         </div>
         <div style={{ marginTop: 50, marginLeft: 110 }}>
           <div>
+            <a
+              href={"https://redis.com/"}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ cursor: "pointer" }}
+            >
+              <img
+                src={Redis.src}
+                style={{
+                  filter: "contrast(100%) saturate(200%)",
+                  marginRight: 80,
+                }}
+                width="90"
+                height="90"
+              ></img>
+            </a>
             <a
               href={"https://en.wikipedia.org/wiki/LLVM"}
               target="_blank"
