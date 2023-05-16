@@ -20,7 +20,7 @@ export const GPAAndTranscript = () => {
           fontSize: 24,
         }}
       >
-        CGPA: 93.25 / 100
+        CGPA: 92.84 / 100
       </span>
       <Button
         variant="contained"

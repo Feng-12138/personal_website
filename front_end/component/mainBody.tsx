@@ -67,10 +67,10 @@ export default function MainBody() {
   }, []);
 
   const educationTextOne =
-    "University of Waterloo, Bachelor of Mathematics, Major in Computer Science, AI Specialization, Minor in Combinatorics & Optimization, level 3A";
+    "University of Waterloo, Bachelor of Mathematics, Major in Computer Science, AI Specialization, Minor in Combinatorics & Optimization, level 3B";
 
   const educationTextTwo =
-    "CGPA 93.75/100, together with highest performance rating(outstanding) in all work terms";
+    "CGPA 92.84/100, together with highest performance rating(outstanding) in all work terms";
 
   const educationTextThree =
     "Equipped with strong fundemental Computer Science theories through course taken";
