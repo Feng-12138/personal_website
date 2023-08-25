@@ -86,14 +86,14 @@ export default function MainBody() {
     link: "https://www.shakudo.io/",
     name: "Shakudo Inc.",
     title: "Backend Software Engineer",
-    time: "Sep 2023 - Dec 2023",
+    time: "SEP 2023 - DEC 2023",
   };
 
   const informationBluePrint = {
     link: "https://uwblueprint.org/",
     name: "UW Blueprint",
     title: "Backend Project Developer | Volunteer",
-    time: "Sep 2023 - Dec 2023 | Part-time",
+    time: "SEP 2023 - DEC 2023 | Part-time",
   };
 
   const informationHuawei = {
