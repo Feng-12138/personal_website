@@ -5,10 +5,18 @@ import HeadBar from "./fullHeader";
 import HuaweiPhoto from "../images/Huawei.jpg";
 import TribalPhoto from "../images/TribalScale.jpg";
 import TalkaPhoto from "../images/Talka.png";
+import ShakudoPhote from "../images/Shakudo.jpg";
+import BluePrintPhoto from "../images/bluePrint.jpg";
 import "@fontsource/montserrat";
 require("typeface-eb-garamond");
 
 export default function WorkingExperienceMain() {
+  const descriptionShakudo = [
+    "- Expect duties include Implementing/Maintaining the core services of a MLOPs data platform, developing controllers and the application on top of Kubernetes, and maintaining the infrastructure using Terraform",
+  ];
+  const descriptionBluePrint = [
+    "- Work volunteer/part-time (10 hours/week) for a student-run organization, which aims to provide technological solutions for non-profit organizations",
+  ];
   const descriptionHuawei = [
     "- Contributed to the development of the high-performance Machine-Learning Math Library by transforming the IREE open-source project as an integral component of the Huawei GPU Compiler",
     "- Spearheaded the creation of the code generator and testing tools that effectively translated IREE HAL MLIR into Vulkan C++ Host Code, for executing and evaluating device code performance on Huawei Cmodel.",
@@ -88,7 +96,7 @@ export default function WorkingExperienceMain() {
           }}
         >
           <a
-            href="/work_term_record.pdf"
+            href="/work_term_report_yiran_sun.pdf"
             target="_blank"
             style={{
               paddingTop: 4,
@@ -102,6 +110,20 @@ export default function WorkingExperienceMain() {
         </Button>
       </div>
       <div style={{ paddingBottom: 80, paddingTop: 50 }}>
+        <CompanyInfo
+          name={"Shakudo Inc."}
+          date={"Sep 2023 - Dec 2023"}
+          description={descriptionShakudo}
+          logoHref={ShakudoPhote}
+          webHref="https://www.huawei.com/ca/"
+        />
+        <CompanyInfo
+          name={"UW Blueprint"}
+          date={"Sep 2023 - Dec 2023"}
+          description={descriptionBluePrint}
+          logoHref={BluePrintPhoto}
+          webHref="https://www.huawei.com/ca/"
+        />
         <CompanyInfo
           name={"Huawei Technologies Canada"}
           date={"Jan 2023 - Apr 2023"}

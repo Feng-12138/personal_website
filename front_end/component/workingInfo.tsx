@@ -1,7 +1,7 @@
 export default function WorkingInfo(props: { information: object }) {
   const { information } = props as any;
   return (
-    <span style={{ marginLeft: 40 }}>
+    <span style={{ marginLeft: 40, marginBottom: 50 }}>
       <div style={{ fontSize: 32 }}>
         <a href={information["link"]} target="_blank" rel="noopener noreferrer">
           {information["name"]}

@@ -67,7 +67,7 @@ export default function MainBody() {
   }, []);
 
   const educationTextOne =
-    "University of Waterloo, Bachelor of Mathematics, Major in Computer Science, AI Specialization, Minor in Combinatorics & Optimization, level 3B";
+    "University of Waterloo, Bachelor of Mathematics, Major in Computer Science, AI Specialization, Minor in Combinatorics & Optimization, level 4A";
 
   const educationTextTwo =
     "CGPA 92.84/100, together with highest performance rating(outstanding) in all work terms";
@@ -80,6 +80,20 @@ export default function MainBody() {
     name: "Talka.ai",
     title: "Software Engineering Intern",
     time: "MAY 2022 - AUG 2022",
+  };
+
+  const informationShakudo = {
+    link: "https://www.shakudo.io/",
+    name: "Shakudo Inc.",
+    title: "Backend Software Engineer",
+    time: "Sep 2023 - Dec 2023",
+  };
+
+  const informationBluePrint = {
+    link: "https://uwblueprint.org/",
+    name: "UW Blueprint",
+    title: "Backend Project Developer | Volunteer",
+    time: "Sep 2023 - Dec 2023 | Part-time",
   };
 
   const informationHuawei = {
@@ -96,10 +110,16 @@ export default function MainBody() {
     time: "SEP 2021 - DEC 2021",
   };
 
+  const informationEmpty = {
+    name: "",
+    title: "",
+    time: "",
+  };
+
   const projectMeInLoo = {
     name: "Me-In-Loo",
     description:
-      "- Allows users to view, upload, and download memes and emojis. Also supports features include report, like, and Tags",
+      "- Allow users to view, upload, and download memes and emojis. Also supports features include report, like, and Tags",
     description2:
       "- Use MySQL and minIO for data storage, Flask for backend development and Next.js(react) for frontend",
     href: "https://github.com/joycedaiyt/Me-In-Loo",
@@ -112,6 +132,15 @@ export default function MainBody() {
     description2:
       "- Use Next.js for frontend, Express for backend and MongoDB as the database",
     href: " https://github.com/Feng-12138/clickup-public-version",
+  };
+
+  const projectLooSchedule = {
+    name: "Loo-Schedule",
+    description:
+      "- Provide an Android application which aims to offer course selection recommendations to the current/future students who enrolled in UWaterloo and help them organize their future academic paths and careers",
+    description2:
+      "- Use JetPack for frontend, Jersey(Kotlin) for backend, with client-server, pipe and filter, and MVVM architectures",
+    href: "https://github.com/Feng-12138/LooSchedule",
   };
 
   return (
@@ -227,7 +256,6 @@ export default function MainBody() {
           paddingLeft: 105,
           paddingRight: 205,
           textAlign: "left",
-          // whiteSpace: "normal",
         }}
       >
         <div
@@ -252,18 +280,45 @@ export default function MainBody() {
           </div>
           <div
             style={{
-              display: "flex",
-              justifyContent: "space-between",
               marginTop: 80,
               marginLeft: -40,
+              marginRight: -160,
+              display: "flex",
+              justifyContent: "space-around",
             }}
           >
-            <WorkingInfo information={informationHuawei} />
-            <WorkingInfo information={informationTalka} />
-            <WorkingInfo information={informationTribalScale} />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+              }}
+            >
+              <WorkingInfo information={informationShakudo} />
+              <WorkingInfo information={informationTalka} />
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+              }}
+            >
+              <WorkingInfo information={informationBluePrint} />
+              <WorkingInfo information={informationTribalScale} />
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+              }}
+            >
+              <WorkingInfo information={informationHuawei} />
+            </div>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "center", marginTop: 40 }}
+            style={{ display: "flex", justifyContent: "center", marginTop: 0 }}
           >
             <Button
               variant="outlined"
@@ -320,11 +375,11 @@ export default function MainBody() {
             justifyContent: "space-around",
           }}
         >
-          <ProjectInfo projectInfo={projectMeInLoo} windowWidth={windowWidth} />
           <ProjectInfo
-            projectInfo={projectPersonalWebsite}
+            projectInfo={projectLooSchedule}
             windowWidth={windowWidth}
           />
+          <ProjectInfo projectInfo={projectMeInLoo} windowWidth={windowWidth} />
         </div>
       </div>
       <div

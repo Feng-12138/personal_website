@@ -5,6 +5,13 @@ import "@fontsource/montserrat";
 require("typeface-eb-garamond");
 
 export const ProjectMain = () => {
+  const descriptionLooSchedule = [
+    "- Provide the Android application for waterloo students make more suitable course selections for their degrees",
+    "- Use pipe and layer architecture for data parsing, MVVM for frontend, and client-server as backend",
+    "- Tools used including: Jersey for backend, JetPack for frontend, and SQLite for database",
+    "- Github Repo: https://github.com/Feng-12138/LooSchedule",
+    "- Demo Video: https://www.youtube.com/watch?v=Gp3Oa5Of8Lo",
+  ];
   const descriptionMeInLoo = [
     "- Provide the platform for users to share their favourite memes with other users.",
     "- Features include user signup/login, searching by tags, memes uploading/downloading, points calculation, and liking/reporting memes.",
@@ -75,6 +82,12 @@ export const ProjectMain = () => {
         </div>
       </div>
       <div style={{ paddingBottom: 50 }}>
+        <ProjectComponent
+          name="Loo Schedule"
+          date="May 2023 - Aug 2023"
+          description={descriptionLooSchedule}
+          gitHubLink="https://github.com/Feng-12138/LooSchedule"
+        />
         <ProjectComponent
           name="Me-In-Loo"
           date="Sep 2022 - Dec 2022"
