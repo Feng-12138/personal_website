@@ -5,7 +5,7 @@ import HeadBar from "./fullHeader";
 import HuaweiPhoto from "../images/Huawei.jpg";
 import TribalPhoto from "../images/TribalScale.jpg";
 import TalkaPhoto from "../images/Talka.png";
-import ShakudoPhote from "../images/Shakudo.jpg";
+import ShakudoPhote from "../images/shakudo.jpg";
 import BluePrintPhoto from "../images/bluePrint.jpg";
 import "@fontsource/montserrat";
 require("typeface-eb-garamond");
