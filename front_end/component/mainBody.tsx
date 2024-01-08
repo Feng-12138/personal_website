@@ -53,6 +53,7 @@ export default function MainBody() {
 
   useEffect(() => {
     function updateSize() {
+      document.documentElement.style.overflowX = "hidden";
       setWindowWidth(window.innerWidth);
       if (window.innerWidth <= 1440) {
         document.documentElement.style.width = "fit-content";
