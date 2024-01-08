@@ -67,10 +67,10 @@ export default function MainBody() {
   }, []);
 
   const educationTextOne =
-    "University of Waterloo, Bachelor of Mathematics, Major in Computer Science, AI Specialization, Minor in Combinatorics & Optimization, level 4A";
+    "University of Waterloo, Bachelor of Mathematics, Major in Computer Science, AI Specialization, Minor in Combinatorics & Optimization, level 4B";
 
   const educationTextTwo =
-    "CGPA 92.84/100, together with highest performance rating(outstanding) in all work terms";
+    "CGPA 92 /100, together with highest performance rating(outstanding) in all work terms";
 
   const educationTextThree =
     "Equipped with strong fundemental Computer Science theories through course taken";
@@ -86,7 +86,7 @@ export default function MainBody() {
     link: "https://www.shakudo.io/",
     name: "Shakudo Inc.",
     title: "Backend Software Engineer",
-    time: "SEP 2023 - DEC 2023",
+    time: "AUG 2023 - DEC 2023",
   };
 
   const informationBluePrint = {

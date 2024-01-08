@@ -3,7 +3,13 @@ require("typeface-eb-garamond");
 
 export const RelatedCourses = () => {
   const list_courses = {
+    "CS446 Software Design and Architectures: 89%":
+      "https://uwflow.com/course/cs446",
+    "CS486 Introduction to Artificial Intelligence: 87%":
+      "https://uwflow.com/course/cs486",
     "CS348 Database Management: 99%": "https://uwflow.com/course/cs348",
+    "CS370 Numerical Computation 93%": "https://uwflow.com/course/cs370",
+    "CS349 User Interfaces 91%": "https://uwflow.com/course/cs349",
     "CS341 Algorithms: 86%": "https://uwflow.com/course/cs341",
     "CS350 Operating System: 84%": "https://uwflow.com/course/cs350",
     "CS 251 Computer Organization and Design: 93%":
@@ -29,16 +35,16 @@ export const RelatedCourses = () => {
       "https://uwflow.com/course/actsc231",
   };
 
-  let arrCourse = [] as Array<Array<string>>;
   let idx = 0;
 
+  let arrCourseLeft: string[] = [];
+  let arrCourseRight: string[] = [];
+
   for (const course in list_courses) {
-    let curCoursePair = [] as Array<string>;
-    curCoursePair.push(course);
-    if (idx % 2 == 0) {
-      arrCourse.push(curCoursePair);
+    if (idx % 2) {
+      arrCourseRight.push(course);
     } else {
-      arrCourse[arrCourse.length - 1].push(course);
+      arrCourseLeft.push(course);
     }
     idx++;
   }
@@ -46,45 +52,48 @@ export const RelatedCourses = () => {
   return (
     <div
       style={{
+        display: "flex",
+        justifyContent: "space-around",
         marginLeft: "10%",
         marginRight: "10%",
-        display: "flex",
-        fontFamily: "montserrat",
-        fontSize: 18,
-        flexWrap: "wrap",
         marginTop: -40,
-        paddingBottom: 30,
+        paddingBottom: 60,
       }}
     >
-      {arrCourse.map((el, idx) => {
-        return (
-          <div
-            key={idx}
-            style={{
-              marginTop: 15,
-              marginBottom: 15,
-              display: "flex",
-              justifyContent: "space-between",
-              width: "100%",
-            }}
-          >
-            <span>
-              <a href={list_courses[el[0] as keyof typeof list_courses]}>
-                {el[0]}
-              </a>
-            </span>
-            {el.length == 2 ? (
-              <span>
-                <a href={list_courses[el[1] as keyof typeof list_courses]}>
-                  {el[1]}
-                </a>
-              </span>
-            ) : (
-              <></>
-            )}
-          </div>
-        );
-      })}
+      <span
+        style={{
+          display: "flex",
+          justifyContent: "left",
+          fontFamily: "montserrat",
+          fontSize: 18,
+          flexDirection: "column",
+        }}
+      >
+        {arrCourseLeft.map((el, idx) => {
+          return (
+            <div key={idx} style={{ marginBottom: 30 }}>
+              <a href={list_courses[el as keyof typeof list_courses]}>{el}</a>
+            </div>
+          );
+        })}
+      </span>
+      <span
+        style={{
+          display: "flex",
+          justifyContent: "left",
+          fontFamily: "montserrat",
+          fontSize: 18,
+          flexDirection: "column",
+        }}
+      >
+        {arrCourseRight.map((el, idx) => {
+          return (
+            <div key={idx} style={{ marginBottom: 30 }}>
+              <a href={list_courses[el as keyof typeof list_courses]}>{el}</a>
+            </div>
+          );
+        })}
+      </span>
     </div>
   );
 };

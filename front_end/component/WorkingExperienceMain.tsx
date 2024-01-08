@@ -12,10 +12,14 @@ require("typeface-eb-garamond");
 
 export default function WorkingExperienceMain() {
   const descriptionShakudo = [
-    "- Expect duties include Implementing/Maintaining the core services of a MLOPs data platform, developing controllers and the application on top of Kubernetes, and maintaining the infrastructure using Terraform",
+    "- Developed GraphQL resolvers and related garbage collections following ACID principles for CRUD of git repo/branch syncs, network traffic weights splitting, and localhost development in remote codespaces using node, prisma, Istio, and k8s",
+    "- Deployed and configured Snowplow pipelines and Airbyte as stack components using Helm, k8s, Kafka, and pub/sub",
+    "- Implemented VS Code extensions, Jupyter Lab wheels, docker files, and multiprocessing scripts to track containerized code spaces/Jupyter Labs activities and monitor pods/nodes/services health/info within client clusters, using Typescript, Kubernetes, Istio, Python, and WebSocket, and constructed related data charts using Superset and SQL",
+    "- Built a gRPC server/client to watch changes in configMaps, update specs, and restart the referenced resources",
+    "- Established deployment scripts to create/auto-configure/delete an Oracle OKE Cluster and related resources using Bash and Helm which fastened the cluster setup processes for clients by over 90%",
   ];
   const descriptionBluePrint = [
-    "- Work volunteer/part-time (10 hours/week) for a student-run organization, which aims to provide technological solutions for non-profit organizations",
+    "- Set up the Vault Secret, upgraded node, solved package dependencies, and make documentations for all teams",
   ];
   const descriptionHuawei = [
     "- Contributed to the development of the high-performance Machine-Learning Math Library by transforming the IREE open-source project as an integral component of the Huawei GPU Compiler",
@@ -112,17 +116,17 @@ export default function WorkingExperienceMain() {
       <div style={{ paddingBottom: 80, paddingTop: 50 }}>
         <CompanyInfo
           name={"Shakudo Inc."}
-          date={"Sep 2023 - Dec 2023"}
+          date={"Aug 2023 - Dec 2023"}
           description={descriptionShakudo}
           logoHref={ShakudoPhote}
-          webHref="https://www.huawei.com/ca/"
+          webHref="https://www.shakudo.io/"
         />
         <CompanyInfo
           name={"UW Blueprint"}
-          date={"Sep 2023 - Dec 2023"}
+          date={"Aug 2023 - Dec 2023"}
           description={descriptionBluePrint}
           logoHref={BluePrintPhoto}
-          webHref="https://www.huawei.com/ca/"
+          webHref="https://uwblueprint.org/"
         />
         <CompanyInfo
           name={"Huawei Technologies Canada"}

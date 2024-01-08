@@ -74,8 +74,12 @@ export const CompanyInfo = (props: {
           {logoHref ? (
             <img
               src={logoHref.src}
-              width={description.length >= 3 ? 300 : 150}
-              height={description.length >= 3 ? 300 : 150}
+              width={
+                description.length >= 3 && name != "Shakudo Inc." ? 250 : 150
+              }
+              height={
+                description.length >= 3 && name != "Shakudo Inc." ? 250 : 150
+              }
             ></img>
           ) : (
             <></>
