@@ -73,7 +73,7 @@ export default function MainBody() {
     "CGPA 92 /100, together with highest performance rating(outstanding) in all work terms";
 
   const educationTextThree =
-    "Equipped with strong fundemental Computer Science theories through course taken";
+    "Equipped with strong fundemental Computer Science theories through taken courses";
 
   const informationTalka = {
     link: "https://www.talka.ai/",
